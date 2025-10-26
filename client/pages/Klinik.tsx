@@ -22,7 +22,8 @@ export default function Klinik() {
       description: "Daun berubah warna kuning",
       color:
         "bg-yellow-50 hover:bg-yellow-100 border-yellow-200 text-yellow-700",
-      image: "https://images.pexels.com/photos/29454154/pexels-photo-29454154.jpeg",
+      image:
+        "https://images.pexels.com/photos/29454154/pexels-photo-29454154.jpeg",
       imageAlt: "Daun tanaman yang menguning dengan bercak hitam",
     },
     {
@@ -32,7 +33,8 @@ export default function Klinik() {
       description: "Melihat serangga atau tanda kerusakan",
       color:
         "bg-orange-50 hover:bg-orange-100 border-orange-200 text-orange-700",
-      image: "https://images.pexels.com/photos/14917578/pexels-photo-14917578.jpeg",
+      image:
+        "https://images.pexels.com/photos/14917578/pexels-photo-14917578.jpeg",
       imageAlt: "Serangga predator di atas daun tanaman",
     },
     {
@@ -41,7 +43,8 @@ export default function Klinik() {
       title: "Layu / Terkulai",
       description: "Tanaman terlihat lemas dan terkulai",
       color: "bg-red-50 hover:bg-red-100 border-red-200 text-red-700",
-      image: "https://images.pexels.com/photos/11255716/pexels-photo-11255716.jpeg",
+      image:
+        "https://images.pexels.com/photos/11255716/pexels-photo-11255716.jpeg",
       imageAlt: "Daun kering dan berubah warna coklat",
     },
     {
@@ -50,7 +53,8 @@ export default function Klinik() {
       title: "Bercak Coklat",
       description: "Ada bintik atau noda coklat",
       color: "bg-amber-50 hover:bg-amber-100 border-amber-200 text-amber-700",
-      image: "https://images.pexels.com/photos/29454154/pexels-photo-29454154.jpeg",
+      image:
+        "https://images.pexels.com/photos/29454154/pexels-photo-29454154.jpeg",
       imageAlt: "Daun dengan bercak coklat dan spots penyakit",
     },
   ];
