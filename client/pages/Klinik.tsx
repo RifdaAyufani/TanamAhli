@@ -1,38 +1,99 @@
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Stethoscope } from "lucide-react";
+import { Leaf, Bug, Frown, Circle } from "lucide-react";
+
+interface SymptomCard {
+  id: string;
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: string;
+}
 
 export default function Klinik() {
   const navigate = useNavigate();
 
+  const symptoms: SymptomCard[] = [
+    {
+      id: "yellowing",
+      icon: <Leaf className="w-12 h-12" />,
+      title: "Daun Menguning",
+      description: "Daun berubah warna kuning",
+      color: "bg-yellow-50 hover:bg-yellow-100 border-yellow-200 text-yellow-700",
+    },
+    {
+      id: "pests",
+      icon: <Bug className="w-12 h-12" />,
+      title: "Ada Hama/Serangga",
+      description: "Melihat serangga atau tanda kerusakan",
+      color: "bg-orange-50 hover:bg-orange-100 border-orange-200 text-orange-700",
+    },
+    {
+      id: "wilting",
+      icon: <Frown className="w-12 h-12" />,
+      title: "Layu / Terkulai",
+      description: "Tanaman terlihat lemas dan terkulai",
+      color: "bg-red-50 hover:bg-red-100 border-red-200 text-red-700",
+    },
+    {
+      id: "brown-spots",
+      icon: <Circle className="w-12 h-12" />,
+      title: "Bercak Coklat",
+      description: "Ada bintik atau noda coklat",
+      color: "bg-amber-50 hover:bg-amber-100 border-amber-200 text-amber-700",
+    },
+  ];
+
+  const handleSymptomSelect = (symptomId: string) => {
+    navigate(`/diagnosis/${symptomId}`);
+  };
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <section className="flex-1 flex items-center justify-center px-4 py-20">
-        <div className="w-full max-w-2xl text-center space-y-6">
-          <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
-            <Stethoscope className="w-8 h-8 text-primary" />
+    <div className="min-h-screen flex flex-col bg-background">
+      <section className="flex-1 flex flex-col items-center justify-center px-4 py-12 md:py-16">
+        <div className="w-full max-w-5xl">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Tenang, kami bantu cek. Apa yang kamu lihat?
+            </h1>
+            <p className="text-lg text-foreground/60">
+              Pilih gejala yang paling mirip dengan kondisi tanamanmu
+            </p>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            Klinik Tanaman
-          </h1>
+          {/* Symptom Grid 2x2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {symptoms.map((symptom) => (
+              <button
+                key={symptom.id}
+                onClick={() => handleSymptomSelect(symptom.id)}
+                className={`${symptom.color} rounded-xl border-2 p-8 transition-all duration-200 hover:shadow-lg active:scale-95 text-left flex flex-col items-center md:items-start`}
+              >
+                <div className="flex items-center justify-center mb-4 w-full md:w-auto">
+                  <div className="p-3 bg-white/50 rounded-lg">
+                    {symptom.icon}
+                  </div>
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-center md:text-left w-full">
+                  {symptom.title}
+                </h2>
+                <p className="text-sm text-center md:text-left w-full mt-2 opacity-80">
+                  {symptom.description}
+                </p>
+              </button>
+            ))}
+          </div>
 
-          <p className="text-lg text-foreground/70">
-            Layanan konsultasi untuk menyelamatkan tanaman kesayangan kamu.
-          </p>
-
-          <p className="text-base text-foreground/60 max-w-lg mx-auto">
-            Halaman ini sedang dikembangkan. Beritahu kami apa yang ingin kamu
-            lihat di fitur Klinik kami!
-          </p>
-
-          <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
-            <Button
-              onClick={() => navigate("/")}
-              className="h-12 px-8 text-base font-semibold"
-            >
-              Kembali ke Beranda
-            </Button>
+          {/* Help Text */}
+          <div className="mt-12 text-center text-foreground/60 text-sm">
+            <p>Tidak yakin apa gejalanya? 
+              <button 
+                onClick={() => navigate("/")}
+                className="text-primary hover:underline ml-1 font-semibold"
+              >
+                Kembali ke beranda
+              </button>
+            </p>
           </div>
         </div>
       </section>
