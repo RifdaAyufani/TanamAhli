@@ -18,14 +18,16 @@ export default function Klinik() {
       icon: <Leaf className="w-12 h-12" />,
       title: "Daun Menguning",
       description: "Daun berubah warna kuning",
-      color: "bg-yellow-50 hover:bg-yellow-100 border-yellow-200 text-yellow-700",
+      color:
+        "bg-yellow-50 hover:bg-yellow-100 border-yellow-200 text-yellow-700",
     },
     {
       id: "pests",
       icon: <Bug className="w-12 h-12" />,
       title: "Ada Hama/Serangga",
       description: "Melihat serangga atau tanda kerusakan",
-      color: "bg-orange-50 hover:bg-orange-100 border-orange-200 text-orange-700",
+      color:
+        "bg-orange-50 hover:bg-orange-100 border-orange-200 text-orange-700",
     },
     {
       id: "wilting",
@@ -86,8 +88,9 @@ export default function Klinik() {
 
           {/* Help Text */}
           <div className="mt-12 text-center text-foreground/60 text-sm">
-            <p>Tidak yakin apa gejalanya? 
-              <button 
+            <p>
+              Tidak yakin apa gejalanya?
+              <button
                 onClick={() => navigate("/")}
                 className="text-primary hover:underline ml-1 font-semibold"
               >

@@ -68,7 +68,8 @@ export default function Diagnosis() {
       product: {
         name: "Pot Terracotta dengan Drainage Hole",
         price: "Rp 28.000",
-        description: "Pot berkualitas dengan lubang drainase untuk sirkulasi air optimal",
+        description:
+          "Pot berkualitas dengan lubang drainase untuk sirkulasi air optimal",
       },
     },
     "brown-spots": {
@@ -85,7 +86,8 @@ export default function Diagnosis() {
       product: {
         name: "Fungisida Alami Sulfur Dust",
         price: "Rp 52.000",
-        description: "Fungisida alami untuk mencegah dan mengatasi penyakit jamur",
+        description:
+          "Fungisida alami untuk mencegah dan mengatasi penyakit jamur",
       },
     },
   };
@@ -112,9 +114,7 @@ export default function Diagnosis() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
               Oke, ini kemungkinan diagnosisnya...
             </h1>
-            <p className="text-foreground/60">
-              Gejala: {data.title}
-            </p>
+            <p className="text-foreground/60">Gejala: {data.title}</p>
           </div>
 
           {/* Diagnosis Card */}
@@ -136,7 +136,9 @@ export default function Diagnosis() {
 
           {/* Solutions Section */}
           <div className="mb-8 md:mb-12">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Solusi Cepat:</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Solusi Cepat:
+            </h3>
             <div className="space-y-4">
               {data.solutions.map((solution, index) => (
                 <div key={index} className="flex gap-4 items-start">
