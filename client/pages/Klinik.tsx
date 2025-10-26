@@ -79,19 +79,31 @@ export default function Klinik() {
               <button
                 key={symptom.id}
                 onClick={() => handleSymptomSelect(symptom.id)}
-                className={`${symptom.color} rounded-xl border-2 p-8 transition-all duration-200 hover:shadow-lg active:scale-95 text-left flex flex-col items-center md:items-start`}
+                className={`${symptom.color} rounded-xl border-2 overflow-hidden transition-all duration-200 hover:shadow-lg active:scale-95 text-left flex flex-col`}
               >
-                <div className="flex items-center justify-center mb-4 w-full md:w-auto">
-                  <div className="p-3 bg-white/50 rounded-lg">
-                    {symptom.icon}
-                  </div>
+                {/* Image Section */}
+                <div className="w-full h-40 md:h-48 overflow-hidden bg-white/30">
+                  <img
+                    src={symptom.image}
+                    alt={symptom.imageAlt}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h2 className="text-xl md:text-2xl font-bold text-center md:text-left w-full">
-                  {symptom.title}
-                </h2>
-                <p className="text-sm text-center md:text-left w-full mt-2 opacity-80">
-                  {symptom.description}
-                </p>
+
+                {/* Content Section */}
+                <div className="p-6 md:p-8 flex flex-col items-center md:items-start flex-1">
+                  <div className="flex items-center justify-center mb-3 w-full md:w-auto">
+                    <div className="p-2 bg-white/50 rounded-lg">
+                      {symptom.icon}
+                    </div>
+                  </div>
+                  <h2 className="text-xl md:text-2xl font-bold text-center md:text-left w-full">
+                    {symptom.title}
+                  </h2>
+                  <p className="text-sm text-center md:text-left w-full mt-2 opacity-80">
+                    {symptom.description}
+                  </p>
+                </div>
               </button>
             ))}
           </div>
