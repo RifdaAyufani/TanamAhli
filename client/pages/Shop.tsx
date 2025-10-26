@@ -17,28 +17,32 @@ export default function Shop() {
     {
       id: "low-light",
       title: "Untuk Kamar Remang",
-      image: "https://images.pexels.com/photos/2317542/pexels-photo-2317542.jpeg",
+      image:
+        "https://images.pexels.com/photos/2317542/pexels-photo-2317542.jpeg",
       imageAlt: "Ruangan cozy dengan cahaya lembut dan tanaman indah",
       description: "Tanaman yang tumbuh sempurna di cahaya rendah",
     },
     {
       id: "pet-safe",
       title: "Aman untuk Peliharaan",
-      image: "https://images.pexels.com/photos/27278702/pexels-photo-27278702.jpeg",
+      image:
+        "https://images.pexels.com/photos/27278702/pexels-photo-27278702.jpeg",
       imageAlt: "Kucing yang aman bersama tanaman ramah hewan",
       description: "Tanaman non-toxic yang aman untuk pet",
     },
     {
       id: "easy-care",
       title: "Untuk si Pelupa (Perawatan Mudah)",
-      image: "https://images.pexels.com/photos/14142822/pexels-photo-14142822.jpeg",
+      image:
+        "https://images.pexels.com/photos/14142822/pexels-photo-14142822.jpeg",
       imageAlt: "Tanaman kaktus dan sukulent yang tahan lama",
       description: "Tanaman hardy yang membutuhkan sedikit perawatan",
     },
     {
       id: "air-purifier",
       title: "Pembersih Udara Alami",
-      image: "https://images.pexels.com/photos/22610781/pexels-photo-22610781.jpeg",
+      image:
+        "https://images.pexels.com/photos/22610781/pexels-photo-22610781.jpeg",
       imageAlt: "Tanaman dengan daun lebar yang menyegarkan udara",
       description: "Tanaman yang memurnikan udara secara alami",
     },
@@ -58,7 +62,8 @@ export default function Shop() {
               Masih bingung harus mulai dari mana?
             </h2>
             <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Kami punya kuis interaktif untuk membantu kamu menemukan tanaman yang sempurna!
+              Kami punya kuis interaktif untuk membantu kamu menemukan tanaman
+              yang sempurna!
             </p>
             <Button
               size="lg"

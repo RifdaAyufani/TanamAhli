@@ -1,6 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sun, Droplet, AlertTriangle, ShoppingCart, ChevronLeft } from "lucide-react";
+import {
+  Sun,
+  Droplet,
+  AlertTriangle,
+  ShoppingCart,
+  ChevronLeft,
+} from "lucide-react";
 
 interface CareGuideItem {
   icon: React.ReactNode;
@@ -25,7 +31,8 @@ export default function Product() {
       id: "monstera",
       name: "Monstera Deliciosa",
       price: "Rp 150.000",
-      image: "https://images.pexels.com/photos/17925249/pexels-photo-17925249.jpeg",
+      image:
+        "https://images.pexels.com/photos/17925249/pexels-photo-17925249.jpeg",
       description:
         "Monstera Deliciosa adalah tanaman hias populer dengan daun besar yang indah. Tanaman ini cocok untuk pemula dan membuat ruangan lebih hidup.",
       careGuide: [
