@@ -27,7 +27,7 @@ export default function Header({ currentPath = "/" }: HeaderProps) {
               to="/"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                currentPath === "/" ? "text-primary" : "text-foreground/70"
+                currentPath === "/" ? "text-primary" : "text-foreground/70",
               )}
             >
               Home
@@ -36,7 +36,9 @@ export default function Header({ currentPath = "/" }: HeaderProps) {
               to="/klinik"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                currentPath === "/klinik" ? "text-primary" : "text-foreground/70"
+                currentPath === "/klinik"
+                  ? "text-primary"
+                  : "text-foreground/70",
               )}
             >
               Klinik
@@ -45,7 +47,7 @@ export default function Header({ currentPath = "/" }: HeaderProps) {
               to="/shop"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                currentPath === "/shop" ? "text-primary" : "text-foreground/70"
+                currentPath === "/shop" ? "text-primary" : "text-foreground/70",
               )}
             >
               Shop

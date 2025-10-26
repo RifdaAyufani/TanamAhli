@@ -12,7 +12,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Leaf className="w-5 h-5 text-primary" />
-              <span className="text-lg font-bold text-foreground">Tanamahli</span>
+              <span className="text-lg font-bold text-foreground">
+                Tanamahli
+              </span>
             </div>
             <p className="text-sm text-foreground/60">
               Membantu kamu merawat tanaman dengan cinta dan perhatian.
@@ -111,13 +113,22 @@ export default function Footer() {
             © {currentYear} Tanamahli. Semua hak dilindungi.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
               Instagram
             </a>
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
               Twitter
             </a>
-            <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
               Facebook
             </a>
           </div>

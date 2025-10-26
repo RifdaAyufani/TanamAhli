@@ -80,7 +80,9 @@ export default function Index() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Pilihan Tanaman</h3>
+              <h3 className="font-semibold text-foreground mb-2">
+                Pilihan Tanaman
+              </h3>
               <p className="text-sm text-foreground/60">
                 Temukan tanaman yang sempurna untuk ruang dan kemampuan kamu.
               </p>
@@ -91,9 +93,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Panduan Perawatan</h3>
+              <h3 className="font-semibold text-foreground mb-2">
+                Panduan Perawatan
+              </h3>
               <p className="text-sm text-foreground/60">
-                Dapatkan tips ahli dan panduan langkah demi langkah untuk setiap tanaman.
+                Dapatkan tips ahli dan panduan langkah demi langkah untuk setiap
+                tanaman.
               </p>
             </div>
 
@@ -102,9 +107,12 @@ export default function Index() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Dukungan Ahli</h3>
+              <h3 className="font-semibold text-foreground mb-2">
+                Dukungan Ahli
+              </h3>
               <p className="text-sm text-foreground/60">
-                Tanya jawab dengan ahli tanaman kami kapan saja kamu membutuhkan.
+                Tanya jawab dengan ahli tanaman kami kapan saja kamu
+                membutuhkan.
               </p>
             </div>
           </div>

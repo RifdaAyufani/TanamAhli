@@ -22,7 +22,8 @@ export default function Shop() {
           </p>
 
           <p className="text-base text-foreground/60 max-w-lg mx-auto">
-            Halaman ini sedang dikembangkan. Beritahu kami jenis tanaman apa yang ingin kamu lihat!
+            Halaman ini sedang dikembangkan. Beritahu kami jenis tanaman apa
+            yang ingin kamu lihat!
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">

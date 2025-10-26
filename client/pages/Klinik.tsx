@@ -22,7 +22,8 @@ export default function Klinik() {
           </p>
 
           <p className="text-base text-foreground/60 max-w-lg mx-auto">
-            Halaman ini sedang dikembangkan. Beritahu kami apa yang ingin kamu lihat di fitur Klinik kami!
+            Halaman ini sedang dikembangkan. Beritahu kami apa yang ingin kamu
+            lihat di fitur Klinik kami!
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">

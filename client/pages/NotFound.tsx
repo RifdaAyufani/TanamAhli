@@ -26,14 +26,13 @@ const NotFound = () => {
             Halaman Tidak Ditemukan
           </p>
           <p className="text-base text-foreground/60">
-            Sepertinya tanaman ini hilang dari taman kami. Mari kembali ke halaman utama!
+            Sepertinya tanaman ini hilang dari taman kami. Mari kembali ke
+            halaman utama!
           </p>
         </div>
 
         <Link to="/">
-          <Button
-            className="w-full h-12 text-base font-semibold rounded-lg"
-          >
+          <Button className="w-full h-12 text-base font-semibold rounded-lg">
             Kembali ke Beranda
           </Button>
         </Link>
