@@ -7,6 +7,8 @@ interface SymptomCard {
   title: string;
   description: string;
   color: string;
+  image: string;
+  imageAlt: string;
 }
 
 export default function Klinik() {
