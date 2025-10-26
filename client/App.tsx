@@ -27,6 +27,7 @@ function AppContent() {
           <Route path="/" element={<Index />} />
           <Route path="/klinik" element={<Klinik />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/diagnosis/:symptomId" element={<Diagnosis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
