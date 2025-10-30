@@ -9,6 +9,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SideCart from "./components/SideCart";
+import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
