@@ -36,7 +36,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "pothos",
       name: "Pothos (Ekor Kucing)",
       price: "Rp 65.000",
-      image: "https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg",
+      image:
+        "https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg",
       careLevel: "sangat-mudah",
       size: "kecil",
       features: ["air-purifier"],
@@ -49,7 +50,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "snake-plant",
       name: "Snake Plant (Lidah Mertua)",
       price: "Rp 85.000",
-      image: "https://images.pexels.com/photos/3916857/pexels-photo-3916857.jpeg",
+      image:
+        "https://images.pexels.com/photos/3916857/pexels-photo-3916857.jpeg",
       careLevel: "sangat-mudah",
       size: "sedang",
       features: ["air-purifier"],
@@ -76,7 +78,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "zz-plant",
       name: "ZZ Plant",
       price: "Rp 110.000",
-      image: "https://images.pexels.com/photos/5730589/pexels-photo-5730589.jpeg",
+      image:
+        "https://images.pexels.com/photos/5730589/pexels-photo-5730589.jpeg",
       careLevel: "sangat-mudah",
       size: "besar",
       features: ["air-purifier"],
@@ -89,7 +92,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "cast-iron-plant",
       name: "Cast Iron Plant (Aspidistra)",
       price: "Rp 95.000",
-      image: "https://images.pexels.com/photos/2806832/pexels-photo-2806832.jpeg",
+      image:
+        "https://images.pexels.com/photos/2806832/pexels-photo-2806832.jpeg",
       careLevel: "sangat-mudah",
       size: "sedang",
       features: [],
@@ -102,7 +106,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "parlor-palm",
       name: "Parlor Palm (Palem Hias)",
       price: "Rp 150.000",
-      image: "https://images.pexels.com/photos/4552286/pexels-photo-4552286.jpeg",
+      image:
+        "https://images.pexels.com/photos/4552286/pexels-photo-4552286.jpeg",
       careLevel: "cukup-mudah",
       size: "besar",
       features: ["air-purifier"],
@@ -117,7 +122,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "spider-plant",
       name: "Spider Plant (Laba-laba Tanaman)",
       price: "Rp 70.000",
-      image: "https://images.pexels.com/photos/3692746/pexels-photo-3692746.jpeg",
+      image:
+        "https://images.pexels.com/photos/3692746/pexels-photo-3692746.jpeg",
       careLevel: "sangat-mudah",
       size: "kecil",
       features: ["air-purifier"],
@@ -130,7 +136,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "polka-dot",
       name: "Polka Dot Plant (Hypoestes)",
       price: "Rp 75.000",
-      image: "https://images.pexels.com/photos/4588631/pexels-photo-4588631.jpeg",
+      image:
+        "https://images.pexels.com/photos/4588631/pexels-photo-4588631.jpeg",
       careLevel: "cukup-mudah",
       size: "kecil",
       features: [],
@@ -143,7 +150,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "calathea",
       name: "Calathea (Tanaman Doa)",
       price: "Rp 130.000",
-      image: "https://images.pexels.com/photos/5731425/pexels-photo-5731425.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731425/pexels-photo-5731425.jpeg",
       careLevel: "butuh-perhatian",
       size: "sedang",
       features: ["air-purifier"],
@@ -156,7 +164,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "bamboo-palm",
       name: "Bamboo Palm (Chamaedorea)",
       price: "Rp 140.000",
-      image: "https://images.pexels.com/photos/4552287/pexels-photo-4552287.jpeg",
+      image:
+        "https://images.pexels.com/photos/4552287/pexels-photo-4552287.jpeg",
       careLevel: "cukup-mudah",
       size: "besar",
       features: ["air-purifier"],
@@ -169,7 +178,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "african-violet",
       name: "African Violet",
       price: "Rp 55.000",
-      image: "https://images.pexels.com/photos/5731419/pexels-photo-5731419.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731419/pexels-photo-5731419.jpeg",
       careLevel: "cukup-mudah",
       size: "kecil",
       features: [],
@@ -182,7 +192,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "prayer-plant",
       name: "Prayer Plant (Maranta)",
       price: "Rp 85.000",
-      image: "https://images.pexels.com/photos/4588632/pexels-photo-4588632.jpeg",
+      image:
+        "https://images.pexels.com/photos/4588632/pexels-photo-4588632.jpeg",
       careLevel: "cukup-mudah",
       size: "kecil",
       features: [],
@@ -211,7 +222,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "aloe-vera",
       name: "Aloe Vera",
       price: "Rp 50.000",
-      image: "https://images.pexels.com/photos/5731421/pexels-photo-5731421.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731421/pexels-photo-5731421.jpeg",
       careLevel: "sangat-mudah",
       size: "kecil",
       features: [],
@@ -224,7 +236,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "cactus",
       name: "Cactus (Kaktus Hias)",
       price: "Rp 60.000",
-      image: "https://images.pexels.com/photos/3873389/pexels-photo-3873389.jpeg",
+      image:
+        "https://images.pexels.com/photos/3873389/pexels-photo-3873389.jpeg",
       careLevel: "sangat-mudah",
       size: "kecil",
       features: [],
@@ -237,7 +250,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "dracaena",
       name: "Dracaena (Pohon Naga)",
       price: "Rp 100.000",
-      image: "https://images.pexels.com/photos/5731427/pexels-photo-5731427.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731427/pexels-photo-5731427.jpeg",
       careLevel: "sangat-mudah",
       size: "sedang",
       features: ["air-purifier"],
@@ -250,7 +264,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "rubber-plant",
       name: "Rubber Plant (Ficus Elastica)",
       price: "Rp 125.000",
-      image: "https://images.pexels.com/photos/5731437/pexels-photo-5731437.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731437/pexels-photo-5731437.jpeg",
       careLevel: "cukup-mudah",
       size: "besar",
       features: ["air-purifier"],
@@ -263,7 +278,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "philodendron",
       name: "Philodendron (Philodendron Hias)",
       price: "Rp 90.000",
-      image: "https://images.pexels.com/photos/5731433/pexels-photo-5731433.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731433/pexels-photo-5731433.jpeg",
       careLevel: "sangat-mudah",
       size: "sedang",
       features: ["air-purifier"],
@@ -278,7 +294,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "money-plant",
       name: "Money Plant (Tanaman Uang)",
       price: "Rp 80.000",
-      image: "https://images.pexels.com/photos/5731429/pexels-photo-5731429.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731429/pexels-photo-5731429.jpeg",
       careLevel: "sangat-mudah",
       size: "kecil",
       features: ["air-purifier"],
@@ -291,7 +308,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "areca-palm",
       name: "Areca Palm (Palem Areka)",
       price: "Rp 160.000",
-      image: "https://images.pexels.com/photos/4552285/pexels-photo-4552285.jpeg",
+      image:
+        "https://images.pexels.com/photos/4552285/pexels-photo-4552285.jpeg",
       careLevel: "cukup-mudah",
       size: "besar",
       features: ["air-purifier"],
@@ -304,7 +322,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "boston-fern",
       name: "Boston Fern (Pakis Boston)",
       price: "Rp 95.000",
-      image: "https://images.pexels.com/photos/5731428/pexels-photo-5731428.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731428/pexels-photo-5731428.jpeg",
       careLevel: "butuh-perhatian",
       size: "sedang",
       features: ["air-purifier"],
@@ -317,7 +336,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "gerbera",
       name: "Gerbera (Bunga Gerbil)",
       price: "Rp 75.000",
-      image: "https://images.pexels.com/photos/5731435/pexels-photo-5731435.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731435/pexels-photo-5731435.jpeg",
       careLevel: "cukup-mudah",
       size: "kecil",
       features: ["air-purifier"],
@@ -330,7 +350,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "chrysanthemum",
       name: "Chrysanthemum (Bunga Krisan)",
       price: "Rp 70.000",
-      image: "https://images.pexels.com/photos/5731434/pexels-photo-5731434.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731434/pexels-photo-5731434.jpeg",
       careLevel: "cukup-mudah",
       size: "kecil",
       features: ["air-purifier"],
@@ -343,7 +364,8 @@ const categoryProducts: Record<string, Product[]> = {
       id: "english-ivy",
       name: "English Ivy (Merambat Hedera)",
       price: "Rp 65.000",
-      image: "https://images.pexels.com/photos/5731430/pexels-photo-5731430.jpeg",
+      image:
+        "https://images.pexels.com/photos/5731430/pexels-photo-5731430.jpeg",
       careLevel: "cukup-mudah",
       size: "sedang",
       features: ["air-purifier"],
@@ -392,11 +414,7 @@ function ProductCard({ product }: { product: Product }) {
           {product.reassuranceTag.icon}
           <span>{product.reassuranceTag.text}</span>
         </div>
-        <Button
-          size="sm"
-          className="w-full mt-auto"
-          onClick={handleAddToCart}
-        >
+        <Button size="sm" className="w-full mt-auto" onClick={handleAddToCart}>
           <ShoppingCart className="w-4 h-4 mr-2" />
           Tambah ke Keranjang
         </Button>
@@ -443,7 +461,10 @@ function FilterSidebar({
               { value: "butuh-perhatian", label: "Butuh Perhatian" },
             ].map((option) => (
               <div key={option.value} className="flex items-center space-x-3">
-                <RadioGroupItem value={option.value} id={`care-${option.value}`} />
+                <RadioGroupItem
+                  value={option.value}
+                  id={`care-${option.value}`}
+                />
                 <Label
                   htmlFor={`care-${option.value}`}
                   className="text-base font-normal text-foreground/70 cursor-pointer"
@@ -463,9 +484,7 @@ function FilterSidebar({
         </h3>
         <RadioGroup
           value={filters.size || ""}
-          onValueChange={(value) =>
-            onFilterChange({ ...filters, size: value })
-          }
+          onValueChange={(value) => onFilterChange({ ...filters, size: value })}
         >
           <div className="space-y-3">
             {[
@@ -474,7 +493,10 @@ function FilterSidebar({
               { value: "besar", label: "Besar (Pojok Ruang)" },
             ].map((option) => (
               <div key={option.value} className="flex items-center space-x-3">
-                <RadioGroupItem value={option.value} id={`size-${option.value}`} />
+                <RadioGroupItem
+                  value={option.value}
+                  id={`size-${option.value}`}
+                />
                 <Label
                   htmlFor={`size-${option.value}`}
                   className="text-base font-normal text-foreground/70 cursor-pointer"
@@ -538,7 +560,8 @@ export default function ProductListing() {
     "air-purifier": "Pembersih Udara Alami",
   };
 
-  const products = categoryProducts[categoryId] || categoryProducts["low-light"];
+  const products =
+    categoryProducts[categoryId] || categoryProducts["low-light"];
 
   // Apply filters
   const filteredProducts = products.filter((product) => {
@@ -550,7 +573,9 @@ export default function ProductListing() {
     }
     if (
       filters.features.length > 0 &&
-      !filters.features.every((feature) => product.features.includes(feature as any))
+      !filters.features.every((feature) =>
+        product.features.includes(feature as any),
+      )
     ) {
       return false;
     }

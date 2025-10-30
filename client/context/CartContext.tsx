@@ -65,7 +65,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   ]);
 
   const addItem = (
-    item: Omit<CartItem, "quantity" | "checked" | "section">
+    item: Omit<CartItem, "quantity" | "checked" | "section">,
   ) => {
     const existingItem = readyItems.find((i) => i.id === item.id);
 
@@ -95,17 +95,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const updateQuantity = (id: string, quantity: number) => {
     if (quantity < 1) return;
     setReadyItems(
-      readyItems.map((item) =>
-        item.id === id ? { ...item, quantity } : item
-      )
+      readyItems.map((item) => (item.id === id ? { ...item, quantity } : item)),
     );
   };
 
   const toggleItemCheckbox = (id: string) => {
     setReadyItems(
       readyItems.map((item) =>
-        item.id === id ? { ...item, checked: !item.checked } : item
-      )
+        item.id === id ? { ...item, checked: !item.checked } : item,
+      ),
     );
   };
 

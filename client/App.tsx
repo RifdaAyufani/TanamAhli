@@ -30,22 +30,28 @@ function AppContent() {
   return (
     <CartProvider>
       <div className="flex flex-col min-h-screen">
-        <Header currentPath={location.pathname} onCartClick={() => setIsCartOpen(true)} />
+        <Header
+          currentPath={location.pathname}
+          onCartClick={() => setIsCartOpen(true)}
+        />
         <SideCart isOpen={isCartOpen} onOpenChange={setIsCartOpen} />
         <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/klinik" element={<Klinik />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/wizard" element={<Wizard />} />
-          <Route path="/wizard/recommendations" element={<WizardRecommendations />} />
-          <Route path="/category/:categoryId" element={<ProductListing />} />
-          <Route path="/product/:productId" element={<Product />} />
-          <Route path="/diagnosis/:symptomId" element={<Diagnosis />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/klinik" element={<Klinik />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wizard" element={<Wizard />} />
+            <Route
+              path="/wizard/recommendations"
+              element={<WizardRecommendations />}
+            />
+            <Route path="/category/:categoryId" element={<ProductListing />} />
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="/diagnosis/:symptomId" element={<Diagnosis />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </main>
         <Footer />
       </div>

@@ -74,9 +74,7 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
                       <div className="flex-shrink-0 pt-1">
                         <Checkbox
                           checked={item.checked}
-                          onCheckedChange={() =>
-                            toggleItemCheckbox(item.id)
-                          }
+                          onCheckedChange={() => toggleItemCheckbox(item.id)}
                         />
                       </div>
 
@@ -226,7 +224,8 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
             {/* Dynamic Subtotal */}
             <div className="flex justify-between items-center mb-4">
               <span className="text-foreground/70 font-medium">
-                Subtotal ({checkedCount} {checkedCount === 1 ? "item" : "items"}):
+                Subtotal ({checkedCount} {checkedCount === 1 ? "item" : "items"}
+                ):
               </span>
               <span className="text-2xl font-bold text-primary">
                 Rp {subtotal.toLocaleString("id-ID")}
