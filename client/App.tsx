@@ -31,6 +31,7 @@ function AppContent() {
           <Route path="/" element={<Index />} />
           <Route path="/klinik" element={<Klinik />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/wizard" element={<Wizard />} />
           <Route path="/wizard/recommendations" element={<WizardRecommendations />} />
           <Route path="/category/:categoryId" element={<ProductListing />} />
