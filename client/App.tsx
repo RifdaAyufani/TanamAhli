@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import ProductListing from "./pages/ProductListing";
 import Wizard from "./pages/Wizard";
