@@ -12,6 +12,8 @@ import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import ProductListing from "./pages/ProductListing";
+import Wizard from "./pages/Wizard";
+import WizardRecommendations from "./pages/WizardRecommendations";
 import Diagnosis from "./pages/Diagnosis";
 import NotFound from "./pages/NotFound";
 
