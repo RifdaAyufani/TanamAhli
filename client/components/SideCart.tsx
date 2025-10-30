@@ -1,21 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetClose,
-} from "@/components/ui/sheet";
-import {
-  ShoppingCart,
-  X,
   Plus,
   Minus,
   CheckCircle,
   Package,
   Mail,
   Leaf,
+  X,
 } from "lucide-react";
 
 interface SideCartProps {
@@ -64,22 +56,32 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
     onOpenChange(false);
   };
 
+  if (!isOpen) return null;
+
   return (
-    <Sheet open={isOpen} onOpenChange={onOpenChange}>
-      <SheetContent side="right" className="w-full sm:w-96 flex flex-col p-0">
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 z-40 bg-black/80"
+        onClick={() => onOpenChange(false)}
+      />
+
+      {/* Drawer */}
+      <div
+        className="fixed inset-y-0 right-0 z-50 w-full sm:w-96 bg-background shadow-lg flex flex-col animate-in slide-in-from-right duration-500"
+      >
         {/* Header */}
-        <SheetHeader className="border-b border-border/50 px-6 py-6">
-          <div className="flex items-center justify-between w-full">
-            <SheetTitle className="text-2xl font-bold text-foreground">
-              Keranjang Adopsi Saya
-            </SheetTitle>
-            <SheetClose asChild>
-              <button className="text-foreground/70 hover:text-foreground transition-colors">
-                <X className="w-6 h-6" />
-              </button>
-            </SheetClose>
-          </div>
-        </SheetHeader>
+        <div className="border-b border-border/50 px-6 py-6 flex items-center justify-between flex-shrink-0">
+          <h2 className="text-2xl font-bold text-foreground">
+            Keranjang Adopsi Saya
+          </h2>
+          <button
+            onClick={() => onOpenChange(false)}
+            className="text-foreground/70 hover:text-foreground transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
 
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto px-6 py-6">
@@ -193,7 +195,7 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
         </div>
 
         {/* Footer/Action Area */}
-        <div className="border-t border-border/50 px-6 py-6 space-y-3 bg-background">
+        <div className="border-t border-border/50 px-6 py-6 space-y-3 bg-background flex-shrink-0">
           {/* Subtotal */}
           <div className="flex justify-between items-center mb-4">
             <span className="text-foreground/70 font-medium">Subtotal</span>
@@ -219,7 +221,7 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
             Lanjut Belanja
           </button>
         </div>
-      </SheetContent>
-    </Sheet>
+      </div>
+    </>
   );
 }
