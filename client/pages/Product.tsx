@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/context/CartContext";
 import {
   Sun,
   Droplet,
