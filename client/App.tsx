@@ -24,10 +24,12 @@ const queryClient = new QueryClient();
 
 function AppContent() {
   const location = useLocation();
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header currentPath={location.pathname} />
+      <Header currentPath={location.pathname} onCartClick={() => setIsCartOpen(true)} />
+      <SideCart isOpen={isCartOpen} onOpenChange={setIsCartOpen} />
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Index />} />
