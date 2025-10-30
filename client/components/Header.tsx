@@ -56,14 +56,14 @@ export default function Header({ currentPath = "/", onCartClick }: HeaderProps) 
           </nav>
 
           {/* Cart Icon */}
-          <Link
-            to="/cart"
+          <button
+            onClick={onCartClick}
             className="relative p-2 text-foreground/70 hover:text-primary transition-colors"
             aria-label="Shopping cart"
           >
             <ShoppingCart className="w-5 h-5" />
             <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
-          </Link>
+          </button>
         </div>
       </div>
     </header>
