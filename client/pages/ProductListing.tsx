@@ -362,8 +362,16 @@ interface FilterState {
 }
 
 function ProductCard({ product }: { product: Product }) {
+  const { addItem } = useCart();
+
   const handleAddToCart = () => {
-    alert(`${product.name} ditambahkan ke keranjang!`);
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      suitability: product.reassuranceTag.text,
+    });
   };
 
   return (
