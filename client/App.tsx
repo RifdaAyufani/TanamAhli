@@ -28,10 +28,11 @@ function AppContent() {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header currentPath={location.pathname} onCartClick={() => setIsCartOpen(true)} />
-      <SideCart isOpen={isCartOpen} onOpenChange={setIsCartOpen} />
-      <main className="flex-1">
+    <CartProvider>
+      <div className="flex flex-col min-h-screen">
+        <Header currentPath={location.pathname} onCartClick={() => setIsCartOpen(true)} />
+        <SideCart isOpen={isCartOpen} onOpenChange={setIsCartOpen} />
+        <main className="flex-1">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/klinik" element={<Klinik />} />
@@ -45,9 +46,10 @@ function AppContent() {
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 
