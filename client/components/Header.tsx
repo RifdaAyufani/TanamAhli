@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   currentPath?: string;
+  onCartClick?: () => void;
 }
 
 export default function Header({ currentPath = "/" }: HeaderProps) {
