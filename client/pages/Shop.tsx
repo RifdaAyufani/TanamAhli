@@ -68,7 +68,7 @@ export default function Shop() {
             <Button
               size="lg"
               className="h-12 px-8 text-base font-semibold inline-flex items-center gap-2"
-              onClick={() => navigate("/klinik")}
+              onClick={() => navigate("/wizard")}
             >
               Mulai Kuis Tanaman
               <ArrowRight className="w-5 h-5" />
