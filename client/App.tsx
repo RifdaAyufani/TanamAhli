@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import SideCart from "./components/SideCart";
 import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
+import Auth from "./pages/Auth";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
