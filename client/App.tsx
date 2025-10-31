@@ -41,6 +41,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/klinik" element={<Klinik />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
