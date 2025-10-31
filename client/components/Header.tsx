@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShoppingCart, Leaf } from "lucide-react";
+import { ShoppingCart, Leaf, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
