@@ -45,13 +45,9 @@ export default function PlantCard({
       {/* Status Badge */}
       <div className={`relative px-6 pt-4 pb-2 ${statusBg}`}>
         <div className="flex items-center gap-3 mb-2">
-          <div className="text-3xl">
-            {isHappy ? "😊" : "😥"}
-          </div>
+          <div className="text-3xl">{isHappy ? "😊" : "😥"}</div>
           <div>
-            <p className={`font-bold text-lg ${statusColor}`}>
-              {statusText}
-            </p>
+            <p className={`font-bold text-lg ${statusColor}`}>{statusText}</p>
             <p className="text-xs text-foreground/60">{plantName}</p>
           </div>
         </div>
@@ -60,9 +56,7 @@ export default function PlantCard({
       {/* Content */}
       <div className="px-6 py-4 flex-1 flex flex-col">
         {/* Nickname */}
-        <h3 className="text-2xl font-bold text-foreground mb-4">
-          {nickname}
-        </h3>
+        <h3 className="text-2xl font-bold text-foreground mb-4">{nickname}</h3>
 
         {/* Care Info */}
         <div className="bg-muted/20 rounded-lg p-4 mb-6 border border-border/50">
@@ -70,9 +64,7 @@ export default function PlantCard({
             <Droplets className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
             <div className="text-sm text-foreground/80 leading-relaxed">
               <p className="font-medium text-foreground mb-1">{careInfo}</p>
-              <p className="text-xs text-foreground/60">
-                📅 {lastWatered}
-              </p>
+              <p className="text-xs text-foreground/60">📅 {lastWatered}</p>
               {nextWaterIn && (
                 <p className="text-xs text-primary font-medium mt-1">
                   ⏰ {nextWaterIn}

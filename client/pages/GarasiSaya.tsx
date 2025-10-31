@@ -68,8 +68,8 @@ export default function GarasiSaya() {
               lastWatered: "Baru saja disiram",
               nextWaterIn: "Siram lagi dalam 3-5 hari",
             }
-          : plant
-      )
+          : plant,
+      ),
     );
 
     const plant = plants.find((p) => p.id === plantId);
@@ -80,7 +80,7 @@ export default function GarasiSaya() {
 
   const happyCount = plants.filter((p) => p.status === "happy").length;
   const needsAttentionCount = plants.filter(
-    (p) => p.status === "needs-attention"
+    (p) => p.status === "needs-attention",
   ).length;
 
   return (
@@ -114,13 +114,15 @@ export default function GarasiSaya() {
               </p>
             </div>
             <div className="bg-background border border-green-200/50 rounded-lg p-4">
-              <p className="text-sm text-green-700 font-medium mb-1">Sehat & Bahagia</p>
-              <p className="text-3xl font-bold text-green-600">
-                {happyCount}
+              <p className="text-sm text-green-700 font-medium mb-1">
+                Sehat & Bahagia
               </p>
+              <p className="text-3xl font-bold text-green-600">{happyCount}</p>
             </div>
             <div className="bg-background border border-orange-200/50 rounded-lg p-4">
-              <p className="text-sm text-orange-700 font-medium mb-1">Butuh Perhatian</p>
+              <p className="text-sm text-orange-700 font-medium mb-1">
+                Butuh Perhatian
+              </p>
               <p className="text-3xl font-bold text-orange-600">
                 {needsAttentionCount}
               </p>
@@ -189,7 +191,9 @@ export default function GarasiSaya() {
               </h3>
               <ul className="space-y-2 text-sm text-foreground/70">
                 <li>✓ Berikan air dengan konsisten dan dalam jumlah tepat</li>
-                <li>✓ Hindari paparan langsung sinar matahari yang terlalu panas</li>
+                <li>
+                  ✓ Hindari paparan langsung sinar matahari yang terlalu panas
+                </li>
                 <li>✓ Bersihkan daun dari debu setiap 2 minggu</li>
                 <li>✓ Putar tanaman untuk pertumbuhan yang merata</li>
               </ul>

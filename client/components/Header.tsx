@@ -60,7 +60,9 @@ export default function Header({
               to="/garasi-saya"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                currentPath === "/garasi-saya" ? "text-primary" : "text-foreground/70",
+                currentPath === "/garasi-saya"
+                  ? "text-primary"
+                  : "text-foreground/70",
               )}
             >
               Garasi

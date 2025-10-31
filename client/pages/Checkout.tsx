@@ -275,9 +275,7 @@ export default function Checkout() {
                       <p className="font-semibold text-foreground">
                         Standar (3-5 hari kerja)
                       </p>
-                      <p className="text-foreground/60 text-sm">
-                        Rp 25.000
-                      </p>
+                      <p className="text-foreground/60 text-sm">Rp 25.000</p>
                     </div>
                   </label>
 
@@ -294,9 +292,7 @@ export default function Checkout() {
                       <p className="font-semibold text-foreground">
                         Express (1-2 hari kerja)
                       </p>
-                      <p className="text-foreground/60 text-sm">
-                        Rp 50.000
-                      </p>
+                      <p className="text-foreground/60 text-sm">Rp 50.000</p>
                     </div>
                   </label>
                 </div>
