@@ -7,6 +7,7 @@ import {
   LogOut,
   ChevronRight,
   Edit2,
+  Leaf,
 } from "lucide-react";
 import { toast } from "sonner";
 
