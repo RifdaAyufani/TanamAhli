@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useCart } from "@/context/CartContext";
 import { Plus, Minus, CheckCircle, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface SideCartProps {
   isOpen: boolean;
