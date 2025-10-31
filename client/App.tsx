@@ -39,6 +39,7 @@ function AppContent() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
             <Route path="/klinik" element={<Klinik />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
