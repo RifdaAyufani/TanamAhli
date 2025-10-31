@@ -159,7 +159,8 @@ export default function Profile() {
               <span className="font-semibold">ID Akun:</span> MAY-2024-789456
             </p>
             <p className="text-xs text-foreground/60 mt-2">
-              <span className="font-semibold">Bergabung sejak:</span> 15 Januari 2024
+              <span className="font-semibold">Bergabung sejak:</span> 15 Januari
+              2024
             </p>
           </div>
         </div>
