@@ -15,6 +15,8 @@ export interface CartItem {
 interface CartContextType {
   readyItems: CartItem[];
   savedItems: CartItem[];
+  isLoggedIn: boolean;
+  setIsLoggedIn: (loggedIn: boolean) => void;
   addItem: (item: Omit<CartItem, "quantity" | "checked" | "section">) => void;
   removeItem: (id: string, section: "ready" | "saved") => void;
   updateQuantity: (id: string, quantity: number) => void;
