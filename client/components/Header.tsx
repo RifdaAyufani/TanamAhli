@@ -56,6 +56,15 @@ export default function Header({
             >
               Shop
             </Link>
+            <Link
+              to="/garasi-saya"
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                currentPath === "/garasi-saya" ? "text-primary" : "text-foreground/70",
+              )}
+            >
+              Garasi
+            </Link>
           </nav>
 
           {/* Action Buttons */}
