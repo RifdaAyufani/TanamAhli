@@ -17,6 +17,7 @@ import GarasiSaya from "./pages/GarasiSaya";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Product from "./pages/Product";
 import ProductListing from "./pages/ProductListing";
 import Wizard from "./pages/Wizard";
