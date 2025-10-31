@@ -37,6 +37,22 @@ export default function Auth() {
     password: "",
   });
 
+  const handlePostAuthSuccess = () => {
+    setIsLoggedIn(true);
+
+    // Check if there are saved cart items in localStorage
+    const savedCartItems = localStorage.getItem("cartItems");
+    if (savedCartItems) {
+      // Clear the localStorage after retrieving
+      localStorage.removeItem("cartItems");
+      // Redirect to checkout
+      navigate("/checkout");
+    } else {
+      // Redirect to home if no saved cart items
+      navigate("/");
+    }
+  };
+
   const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginForm((prev) => ({ ...prev, [name]: value }));
