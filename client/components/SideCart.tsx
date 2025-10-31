@@ -10,9 +10,11 @@ interface SideCartProps {
 }
 
 export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
+  const navigate = useNavigate();
   const {
     readyItems,
     savedItems,
+    isLoggedIn,
     removeItem,
     updateQuantity,
     toggleItemCheckbox,
@@ -27,7 +29,21 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
     .reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
-    alert(`Proceeding to checkout with ${checkedCount} items!`);
+    // Validate cart: check if any items are selected
+    if (subtotal <= 0) {
+      return;
+    }
+
+    // Check login status
+    if (isLoggedIn) {
+      // User is logged in, proceed to checkout
+      navigate("/checkout");
+    } else {
+      // User is not logged in, save cart to localStorage and redirect to auth
+      const checkedItems = readyItems.filter((item) => item.checked);
+      localStorage.setItem("cartItems", JSON.stringify(checkedItems));
+      navigate("/auth");
+    }
   };
 
   if (!isOpen) return null;
