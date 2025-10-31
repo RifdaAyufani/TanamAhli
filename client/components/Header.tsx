@@ -58,15 +58,26 @@ export default function Header({
             </Link>
           </nav>
 
-          {/* Cart Icon */}
-          <button
-            onClick={onCartClick}
-            className="relative p-2 text-foreground/70 hover:text-primary transition-colors"
-            aria-label="Shopping cart"
-          >
-            <ShoppingCart className="w-5 h-5" />
-            <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
-          </button>
+          {/* Action Buttons */}
+          <div className="flex items-center gap-4">
+            {/* Cart Icon */}
+            <button
+              onClick={onCartClick}
+              className="relative p-2 text-foreground/70 hover:text-primary transition-colors"
+              aria-label="Shopping cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
+            </button>
+
+            {/* Login Link */}
+            <Link
+              to="/auth"
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
+            >
+              Masuk
+            </Link>
+          </div>
         </div>
       </div>
     </header>
