@@ -97,7 +97,7 @@ export default function Auth() {
         toast.success("Akun berhasil dibuat!", {
           description: `Selamat datang ${signUpForm.name}!`,
         });
-        navigate("/");
+        handlePostAuthSuccess();
         setIsLoading(false);
       } else {
         toast.error("Mohon isi semua kolom");
