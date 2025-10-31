@@ -163,6 +163,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       value={{
         readyItems,
         savedItems,
+        isLoggedIn,
+        setIsLoggedIn,
         addItem,
         removeItem,
         updateQuantity,
