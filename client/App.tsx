@@ -13,6 +13,7 @@ import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
+import GarasiSaya from "./pages/GarasiSaya";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
