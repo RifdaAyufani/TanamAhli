@@ -254,7 +254,7 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
               size="lg"
               className="w-full h-12 text-base font-semibold"
               onClick={handleCheckout}
-              disabled={checkedCount === 0}
+              disabled={subtotal <= 0}
             >
               Lanjut ke Pembayaran
             </Button>
