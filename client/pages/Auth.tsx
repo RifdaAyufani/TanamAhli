@@ -109,7 +109,9 @@ export default function Auth() {
             <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
               <Leaf className="w-6 h-6 text-primary" />
             </div>
-            <span className="text-2xl font-bold text-foreground">Tanamahli</span>
+            <span className="text-2xl font-bold text-foreground">
+              Tanamahli
+            </span>
           </div>
         </div>
 
@@ -304,11 +306,17 @@ export default function Auth() {
           {/* Terms */}
           <p className="text-xs text-foreground/60 text-center mt-8">
             Dengan masuk atau mendaftar, kamu menyetujui{" "}
-            <a href="#" className="text-primary hover:text-primary/80 font-medium">
+            <a
+              href="#"
+              className="text-primary hover:text-primary/80 font-medium"
+            >
               Syarat Layanan
             </a>{" "}
             dan{" "}
-            <a href="#" className="text-primary hover:text-primary/80 font-medium">
+            <a
+              href="#"
+              className="text-primary hover:text-primary/80 font-medium"
+            >
               Kebijakan Privasi
             </a>
           </p>

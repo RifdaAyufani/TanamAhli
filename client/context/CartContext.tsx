@@ -72,9 +72,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
         if (existingItem) {
           // If item already exists, increase quantity
-          toast.success(`${item.name} ditambahkan. Total: ${existingItem.quantity + 1}`, {
-            description: "Item sudah ada di keranjang",
-          });
+          toast.success(
+            `${item.name} ditambahkan. Total: ${existingItem.quantity + 1}`,
+            {
+              description: "Item sudah ada di keranjang",
+            },
+          );
           return prevItems.map((i) =>
             i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
           );
@@ -96,27 +99,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     [],
   );
 
-  const removeItem = useCallback(
-    (id: string, section: "ready" | "saved") => {
-      if (section === "ready") {
-        setReadyItems((prevItems) =>
-          prevItems.filter((item) => item.id !== id),
-        );
-      } else {
-        setSavedItems((prevItems) =>
-          prevItems.filter((item) => item.id !== id),
-        );
-      }
-    },
-    [],
-  );
+  const removeItem = useCallback((id: string, section: "ready" | "saved") => {
+    if (section === "ready") {
+      setReadyItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    } else {
+      setSavedItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    }
+  }, []);
 
   const updateQuantity = useCallback((id: string, quantity: number) => {
     if (quantity < 1) return;
     setReadyItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id ? { ...item, quantity } : item,
-      ),
+      prevItems.map((item) => (item.id === id ? { ...item, quantity } : item)),
     );
   }, []);
 
