@@ -65,74 +65,100 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     },
   ]);
 
-  const addItem = (
-    item: Omit<CartItem, "quantity" | "checked" | "section">,
-  ) => {
-    const existingItem = readyItems.find((i) => i.id === item.id);
+  const addItem = useCallback(
+    (item: Omit<CartItem, "quantity" | "checked" | "section">) => {
+      setReadyItems((prevItems) => {
+        const existingItem = prevItems.find((i) => i.id === item.id);
 
-    if (existingItem) {
-      // If item already exists, increase quantity
-      updateQuantity(item.id, existingItem.quantity + 1);
-    } else {
-      // Add new item to ready items
-      const newItem: CartItem = {
-        ...item,
-        quantity: 1,
-        checked: true,
-        section: "ready",
-      };
-      setReadyItems([...readyItems, newItem]);
-    }
-  };
+        if (existingItem) {
+          // If item already exists, increase quantity
+          toast.success(`${item.name} ditambahkan. Total: ${existingItem.quantity + 1}`, {
+            description: "Item sudah ada di keranjang",
+          });
+          return prevItems.map((i) =>
+            i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
+          );
+        } else {
+          // Add new item to ready items
+          const newItem: CartItem = {
+            ...item,
+            quantity: 1,
+            checked: true,
+            section: "ready",
+          };
+          toast.success(`${item.name} ditambahkan ke keranjang! 🌿`, {
+            description: "Buka keranjang untuk melihat pesananmu",
+          });
+          return [...prevItems, newItem];
+        }
+      });
+    },
+    [],
+  );
 
-  const removeItem = (id: string, section: "ready" | "saved") => {
-    if (section === "ready") {
-      setReadyItems(readyItems.filter((item) => item.id !== id));
-    } else {
-      setSavedItems(savedItems.filter((item) => item.id !== id));
-    }
-  };
+  const removeItem = useCallback(
+    (id: string, section: "ready" | "saved") => {
+      if (section === "ready") {
+        setReadyItems((prevItems) =>
+          prevItems.filter((item) => item.id !== id),
+        );
+      } else {
+        setSavedItems((prevItems) =>
+          prevItems.filter((item) => item.id !== id),
+        );
+      }
+    },
+    [],
+  );
 
-  const updateQuantity = (id: string, quantity: number) => {
+  const updateQuantity = useCallback((id: string, quantity: number) => {
     if (quantity < 1) return;
-    setReadyItems(
-      readyItems.map((item) => (item.id === id ? { ...item, quantity } : item)),
+    setReadyItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, quantity } : item,
+      ),
     );
-  };
+  }, []);
 
-  const toggleItemCheckbox = (id: string) => {
-    setReadyItems(
-      readyItems.map((item) =>
+  const toggleItemCheckbox = useCallback((id: string) => {
+    setReadyItems((prevItems) =>
+      prevItems.map((item) =>
         item.id === id ? { ...item, checked: !item.checked } : item,
       ),
     );
-  };
+  }, []);
 
-  const saveItemForLater = (id: string) => {
-    const item = readyItems.find((item) => item.id === id);
-    if (item) {
-      const savedItem: CartItem = {
-        ...item,
-        checked: false,
-        section: "saved",
-      };
-      setSavedItems([...savedItems, savedItem]);
-      removeItem(id, "ready");
-    }
-  };
+  const saveItemForLater = useCallback((id: string) => {
+    setReadyItems((prevReadyItems) => {
+      const item = prevReadyItems.find((item) => item.id === id);
+      if (item) {
+        const savedItem: CartItem = {
+          ...item,
+          checked: false,
+          section: "saved",
+        };
+        setSavedItems((prevSavedItems) => [...prevSavedItems, savedItem]);
+        return prevReadyItems.filter((item) => item.id !== id);
+      }
+      return prevReadyItems;
+    });
+  }, []);
 
-  const moveToCart = (id: string) => {
-    const item = savedItems.find((item) => item.id === id);
-    if (item) {
-      const readyItem: CartItem = {
-        ...item,
-        checked: true,
-        section: "ready",
-      };
-      setReadyItems([...readyItems, readyItem]);
-      removeItem(id, "saved");
-    }
-  };
+  const moveToCart = useCallback((id: string) => {
+    setSavedItems((prevSavedItems) => {
+      const item = prevSavedItems.find((item) => item.id === id);
+      if (item) {
+        const readyItem: CartItem = {
+          ...item,
+          checked: true,
+          section: "ready",
+        };
+        setReadyItems((prevReadyItems) => [...prevReadyItems, readyItem]);
+        return prevSavedItems.filter((item) => item.id !== id);
+      }
+      return prevSavedItems;
+    });
+  }, []);
 
   return (
     <CartContext.Provider
