@@ -27,6 +27,15 @@ export default function Profile() {
 
   const menuItems: MenuItem[] = [
     {
+      id: "garasi-saya",
+      icon: <Leaf className="w-5 h-5" />,
+      label: "Garasi Tanamanku",
+      description: "Lihat dan rawat koleksi tanaman Anda",
+      onClick: () => {
+        navigate("/garasi-saya");
+      },
+    },
+    {
       id: "personal-info",
       icon: <User className="w-5 h-5" />,
       label: "Informasi Personal",
