@@ -73,7 +73,7 @@ export default function Auth() {
         toast.success("Selamat datang kembali!", {
           description: `Login berhasil untuk ${loginForm.email}`,
         });
-        navigate("/");
+        handlePostAuthSuccess();
         setIsLoading(false);
       } else {
         toast.error("Mohon isi semua kolom");
