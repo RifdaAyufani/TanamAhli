@@ -28,6 +28,8 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [readyItems, setReadyItems] = useState<CartItem[]>([
     {
       id: "monstera",
