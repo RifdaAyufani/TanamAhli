@@ -59,7 +59,7 @@ export default function Header({
           </nav>
 
           {/* Action Buttons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             {/* Cart Icon */}
             <button
               onClick={onCartClick}
@@ -69,6 +69,14 @@ export default function Header({
               <ShoppingCart className="w-5 h-5" />
               <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
             </button>
+
+            {/* Profile Link */}
+            <Link
+              to="/profile"
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
+            >
+              Akun
+            </Link>
 
             {/* Login Link */}
             <Link
