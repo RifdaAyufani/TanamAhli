@@ -54,10 +54,15 @@ export default function Product() {
   };
 
   const product = productMap[productId || "monstera"] || productMap.monstera;
+  const { addItem } = useCart();
 
   const handleAddToCart = () => {
-    // TODO: Implement add to cart functionality
-    alert(`${product.name} ditambahkan ke keranjang!`);
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: parseInt(product.price.replace(/\D/g, "")),
+      image: product.image,
+    });
   };
 
   return (
