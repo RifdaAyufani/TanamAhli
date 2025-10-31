@@ -22,6 +22,7 @@ interface SignUpForm {
 
 export default function Auth() {
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useCart();
   const [mode, setMode] = useState<AuthMode>("login");
   const [isLoading, setIsLoading] = useState(false);
 
