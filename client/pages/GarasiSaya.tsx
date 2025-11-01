@@ -1,19 +1,24 @@
 import { useState } from "react";
 import PlantCard, { PlantStatus } from "@/components/PlantCard";
+import WateringModal from "@/components/WateringModal";
 import { Button } from "@/components/ui/button";
 import { Plus, ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import {
+  formatLastWatered,
+  formatNextWateringPrompt,
+  getPlantStatus,
+} from "@/lib/dateFormatters";
 
 interface Plant {
   id: string;
   nickname: string;
   plantName: string;
   image: string;
-  status: PlantStatus;
   careInfo: string;
-  lastWatered: string;
-  nextWaterIn?: string;
+  lastWateredDate: Date;
+  wateringFrequencyDays: number;
   adoptedDate: string;
 }
 
