@@ -74,19 +74,22 @@ export default function PlantCard({
           </div>
         </div>
 
-        {/* Water Button (for needs attention state) */}
-        {!isHappy && onWater && (
+        {/* Water Button */}
+        {onWater && (
           <Button
             onClick={onWater}
-            className="w-full h-11 text-base font-semibold bg-primary hover:bg-primary/90 mt-auto"
+            variant={isHappy ? "outline" : "default"}
+            className={`w-full h-11 text-base font-semibold mt-auto ${
+              !isHappy ? "bg-primary hover:bg-primary/90" : ""
+            }`}
           >
             <Droplets className="w-4 h-4 mr-2" />
             Saya Sudah Siram!
           </Button>
         )}
 
-        {/* Happy state indicator button */}
-        {isHappy && (
+        {/* Status footer for happy plants */}
+        {isHappy && !onWater && (
           <div className="mt-auto pt-4 border-t border-border/50">
             <p className="text-xs text-center text-foreground/60">
               ✅ Tanaman ini sehat dan bahagia!
