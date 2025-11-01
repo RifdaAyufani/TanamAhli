@@ -24,6 +24,9 @@ interface Plant {
 
 export default function GarasiSaya() {
   const navigate = useNavigate();
+  const [selectedPlantForWatering, setSelectedPlantForWatering] = useState<
+    Plant | null
+  >(null);
 
   const [plants, setPlants] = useState<Plant[]>([
     {
@@ -32,10 +35,9 @@ export default function GarasiSaya() {
       plantName: "Monstera Deliciosa",
       image:
         "https://images.pexels.com/photos/17925249/pexels-photo-17925249.jpeg",
-      status: "happy",
-      careInfo: "Disiram 2 hari lalu. Siram lagi dalam 5 hari.",
-      lastWatered: "Disiram 2 hari lalu",
-      nextWaterIn: "Siram lagi dalam 5 hari",
+      careInfo: "Monstera menyukai cahaya terang tidak langsung",
+      lastWateredDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
+      wateringFrequencyDays: 5,
       adoptedDate: "15 Januari 2024",
     },
     {
@@ -44,9 +46,9 @@ export default function GarasiSaya() {
       plantName: "Kaktus Mini",
       image:
         "https://images.pexels.com/photos/3873389/pexels-photo-3873389.jpeg",
-      status: "needs-attention",
-      careInfo: "Terakhir disiram 1 minggu lalu.",
-      lastWatered: "Terakhir disiram 1 minggu lalu",
+      careInfo: "Kaktus tahan kering, jarang perlu air",
+      lastWateredDate: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000),
+      wateringFrequencyDays: 14,
       adoptedDate: "10 Januari 2024",
     },
     {
@@ -55,10 +57,9 @@ export default function GarasiSaya() {
       plantName: "Spider Plant",
       image:
         "https://images.pexels.com/photos/3692746/pexels-photo-3692746.jpeg",
-      status: "happy",
-      careInfo: "Disiram 3 hari lalu. Siram lagi dalam 4 hari.",
-      lastWatered: "Disiram 3 hari lalu",
-      nextWaterIn: "Siram lagi dalam 4 hari",
+      careInfo: "Spider plant mudah dirawat dan tahan lama",
+      lastWateredDate: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
+      wateringFrequencyDays: 4,
       adoptedDate: "20 Januari 2024",
     },
   ]);
