@@ -34,6 +34,9 @@ export default function SideCart({ isOpen, onOpenChange }: SideCartProps) {
       return;
     }
 
+    // Close the cart drawer
+    onOpenChange(false);
+
     // Check login status
     if (isLoggedIn) {
       // User is logged in, proceed to checkout
