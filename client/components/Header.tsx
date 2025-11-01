@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart, Leaf, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/context/CartContext";
 
 interface HeaderProps {
   currentPath?: string;
@@ -11,6 +12,7 @@ export default function Header({
   currentPath = "/",
   onCartClick,
 }: HeaderProps) {
+  const { isLoggedIn } = useCart();
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
