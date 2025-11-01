@@ -156,11 +156,17 @@ export default function GarasiSaya() {
                 nickname={plant.nickname}
                 plantName={plant.plantName}
                 image={plant.image}
-                status={plant.status}
+                status={getPlantStatus(
+                  plant.lastWateredDate,
+                  plant.wateringFrequencyDays,
+                )}
                 careInfo={plant.careInfo}
-                lastWatered={plant.lastWatered}
-                nextWaterIn={plant.nextWaterIn}
-                onWater={() => handleWaterPlant(plant.id)}
+                lastWatered={formatLastWatered(plant.lastWateredDate)}
+                nextWaterIn={formatNextWateringPrompt(
+                  plant.lastWateredDate,
+                  plant.wateringFrequencyDays,
+                )}
+                onWater={() => handleWaterPlant(plant)}
               />
             ))}
           </div>
