@@ -89,9 +89,11 @@ export default function GarasiSaya() {
     setSelectedPlantForWatering(null);
   };
 
-  const happyCount = plants.filter((p) => p.status === "happy").length;
+  const happyCount = plants.filter(
+    (p) => getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) === "happy"
+  ).length;
   const needsAttentionCount = plants.filter(
-    (p) => p.status === "needs-attention",
+    (p) => getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) === "needs-attention"
   ).length;
 
   return (
