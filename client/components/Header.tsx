@@ -83,16 +83,6 @@ export default function Header({
               <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
             </button>
 
-            {/* Garasi Link - Only show if logged in */}
-            {isLoggedIn && (
-              <Link
-                to="/garasi-saya"
-                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
-              >
-                Garasi
-              </Link>
-            )}
-
             {/* Profile Link - Only show if logged in */}
             {isLoggedIn && (
               <Link
