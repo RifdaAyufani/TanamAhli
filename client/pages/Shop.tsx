@@ -46,6 +46,14 @@ export default function Shop() {
       imageAlt: "Tanaman dengan daun lebar yang menyegarkan udara",
       description: "Tanaman yang memurnikan udara secara alami",
     },
+    {
+      id: "ornamental",
+      title: "Tanaman Hias",
+      image:
+        "https://images.pexels.com/photos/5730517/pexels-photo-5730517.jpeg",
+      imageAlt: "Koleksi tanaman hias dengan daun berwarna-warni dan indah",
+      description: "Tanaman dengan daun dan bunga yang indah untuk mempercantik ruangan",
+    },
   ];
 
   const handleCategoryClick = (categoryId: string) => {
