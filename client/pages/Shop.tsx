@@ -52,7 +52,8 @@ export default function Shop() {
       image:
         "https://images.pexels.com/photos/5730517/pexels-photo-5730517.jpeg",
       imageAlt: "Koleksi tanaman hias dengan daun berwarna-warni dan indah",
-      description: "Tanaman dengan daun dan bunga yang indah untuk mempercantik ruangan",
+      description:
+        "Tanaman dengan daun dan bunga yang indah untuk mempercantik ruangan",
     },
   ];
 

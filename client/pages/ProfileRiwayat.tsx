@@ -285,7 +285,9 @@ export default function ProfileRiwayat() {
                     {/* Price Summary */}
                     <div className="bg-muted/20 rounded-lg p-4">
                       <div className="flex justify-between items-center">
-                        <span className="text-foreground/70">Total Pesanan</span>
+                        <span className="text-foreground/70">
+                          Total Pesanan
+                        </span>
                         <span className="text-2xl font-bold text-primary">
                           Rp {order.total.toLocaleString("id-ID")}
                         </span>
