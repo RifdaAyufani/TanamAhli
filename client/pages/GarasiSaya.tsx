@@ -24,9 +24,8 @@ interface Plant {
 
 export default function GarasiSaya() {
   const navigate = useNavigate();
-  const [selectedPlantForWatering, setSelectedPlantForWatering] = useState<
-    Plant | null
-  >(null);
+  const [selectedPlantForWatering, setSelectedPlantForWatering] =
+    useState<Plant | null>(null);
 
   const [plants, setPlants] = useState<Plant[]>([
     {
@@ -90,10 +89,13 @@ export default function GarasiSaya() {
   };
 
   const happyCount = plants.filter(
-    (p) => getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) === "happy"
+    (p) =>
+      getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) === "happy",
   ).length;
   const needsAttentionCount = plants.filter(
-    (p) => getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) === "needs-attention"
+    (p) =>
+      getPlantStatus(p.lastWateredDate, p.wateringFrequencyDays) ===
+      "needs-attention",
   ).length;
 
   return (

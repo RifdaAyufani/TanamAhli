@@ -16,7 +16,7 @@ export default function WateringModal({
   plantName,
 }: WateringModalProps) {
   const [selectedDate, setSelectedDate] = useState<string>(
-    new Date().toISOString().split("T")[0]
+    new Date().toISOString().split("T")[0],
   );
   const [mode, setMode] = useState<"today" | "date-picker">("today");
 
@@ -31,10 +31,7 @@ export default function WateringModal({
   return (
     <>
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 z-40 bg-black/50"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 z-40 bg-black/50" onClick={onClose} />
 
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
@@ -121,17 +118,10 @@ export default function WateringModal({
 
           {/* Actions */}
           <div className="flex gap-3">
-            <Button
-              variant="outline"
-              className="flex-1"
-              onClick={onClose}
-            >
+            <Button variant="outline" className="flex-1" onClick={onClose}>
               Batal
             </Button>
-            <Button
-              className="flex-1"
-              onClick={handleConfirm}
-            >
+            <Button className="flex-1" onClick={handleConfirm}>
               Simpan
             </Button>
           </div>

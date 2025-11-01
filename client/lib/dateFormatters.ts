@@ -3,12 +3,11 @@
  * - Less than 1 week: "Disiram X hari lalu"
  * - 1 week or more: "15 Januari 2024"
  */
-export function formatLastWatered(
-  lastWateredDate: Date | string,
-): string {
-  const date = typeof lastWateredDate === "string"
-    ? new Date(lastWateredDate)
-    : lastWateredDate;
+export function formatLastWatered(lastWateredDate: Date | string): string {
+  const date =
+    typeof lastWateredDate === "string"
+      ? new Date(lastWateredDate)
+      : lastWateredDate;
 
   const today = new Date();
   const diffTime = today.getTime() - date.getTime();
@@ -40,9 +39,10 @@ export function calculateNextWateringDate(
   lastWateredDate: Date | string,
   frequencyDays: number,
 ): Date {
-  const date = typeof lastWateredDate === "string"
-    ? new Date(lastWateredDate)
-    : lastWateredDate;
+  const date =
+    typeof lastWateredDate === "string"
+      ? new Date(lastWateredDate)
+      : lastWateredDate;
 
   const nextDate = new Date(date);
   nextDate.setDate(nextDate.getDate() + frequencyDays);
