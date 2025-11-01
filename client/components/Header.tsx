@@ -83,21 +83,35 @@ export default function Header({
               <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
             </button>
 
-            {/* Profile Link */}
-            <Link
-              to="/profile"
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
-            >
-              Akun
-            </Link>
+            {/* Garasi Link - Only show if logged in */}
+            {isLoggedIn && (
+              <Link
+                to="/garasi-saya"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
+              >
+                Garasi
+              </Link>
+            )}
 
-            {/* Login Link */}
-            <Link
-              to="/auth"
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
-            >
-              Masuk
-            </Link>
+            {/* Profile Link - Only show if logged in */}
+            {isLoggedIn && (
+              <Link
+                to="/profile"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
+              >
+                Akun
+              </Link>
+            )}
+
+            {/* Login Link - Only show if NOT logged in */}
+            {!isLoggedIn && (
+              <Link
+                to="/auth"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors px-3 py-2"
+              >
+                Masuk
+              </Link>
+            )}
           </div>
         </div>
       </div>
