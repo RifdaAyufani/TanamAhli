@@ -13,6 +13,9 @@ import { CartProvider } from "./context/CartContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
+import ProfileInfo from "./pages/ProfileInfo";
+import ProfileAlamat from "./pages/ProfileAlamat";
+import ProfileRiwayat from "./pages/ProfileRiwayat";
 import GarasiSaya from "./pages/GarasiSaya";
 import Klinik from "./pages/Klinik";
 import Shop from "./pages/Shop";
@@ -44,6 +47,9 @@ function AppContent() {
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/info" element={<ProfileInfo />} />
+            <Route path="/profile/alamat" element={<ProfileAlamat />} />
+            <Route path="/profile/riwayat" element={<ProfileRiwayat />} />
             <Route path="/garasi-saya" element={<GarasiSaya />} />
             <Route path="/klinik" element={<Klinik />} />
             <Route path="/shop" element={<Shop />} />
