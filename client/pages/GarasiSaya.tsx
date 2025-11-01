@@ -64,24 +64,29 @@ export default function GarasiSaya() {
     },
   ]);
 
-  const handleWaterPlant = (plantId: string) => {
+  const handleWaterPlant = (plant: Plant) => {
+    setSelectedPlantForWatering(plant);
+  };
+
+  const handleWateringConfirm = (date: Date) => {
+    if (!selectedPlantForWatering) return;
+
     setPlants(
       plants.map((plant) =>
-        plant.id === plantId
+        plant.id === selectedPlantForWatering.id
           ? {
               ...plant,
-              status: "happy" as const,
-              lastWatered: "Baru saja disiram",
-              nextWaterIn: "Siram lagi dalam 3-5 hari",
+              lastWateredDate: date,
             }
           : plant,
       ),
     );
 
-    const plant = plants.find((p) => p.id === plantId);
-    toast.success(`${plant?.nickname} sekarang segar dan senang! 🌿`, {
-      description: "Terima kasih sudah merawatnya",
+    toast.success(`${selectedPlantForWatering.nickname} berhasil disiram! 🌿`, {
+      description: "Terima kasih sudah merawatnya dengan baik",
     });
+
+    setSelectedPlantForWatering(null);
   };
 
   const happyCount = plants.filter((p) => p.status === "happy").length;
