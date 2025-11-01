@@ -41,9 +41,7 @@ export default function Profile() {
       label: "Informasi Personal",
       description: "Untuk mengubah nama/password",
       onClick: () => {
-        toast.info("Informasi Personal", {
-          description: "Fitur ini sedang dalam pengembangan",
-        });
+        navigate("/profile/info");
       },
     },
     {
@@ -52,9 +50,7 @@ export default function Profile() {
       label: "Alamat Tersimpan",
       description: "Untuk menambah/mengedit alamat pengiriman",
       onClick: () => {
-        toast.info("Alamat Tersimpan", {
-          description: "Fitur ini sedang dalam pengembangan",
-        });
+        navigate("/profile/alamat");
       },
     },
     {
@@ -63,9 +59,7 @@ export default function Profile() {
       label: "Riwayat Adopsi",
       description: "Untuk melihat pesanan sebelumnya",
       onClick: () => {
-        toast.info("Riwayat Adopsi", {
-          description: "Fitur ini sedang dalam pengembangan",
-        });
+        navigate("/profile/riwayat");
       },
     },
   ];
