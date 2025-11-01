@@ -220,6 +220,14 @@ export default function GarasiSaya() {
           </div>
         </div>
       </section>
+
+      {/* Watering Modal */}
+      <WateringModal
+        isOpen={selectedPlantForWatering !== null}
+        onClose={() => setSelectedPlantForWatering(null)}
+        onConfirm={handleWateringConfirm}
+        plantName={selectedPlantForWatering?.nickname || ""}
+      />
     </div>
   );
 }
